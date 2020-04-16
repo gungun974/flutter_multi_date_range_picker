@@ -2,6 +2,7 @@ name: multi_date_range_picker
 description: Add to your project a Multi Date Range Picker
 version: 0.0.1
 author: Gungun974
+homepage: https://github.com/gungun974/flutter_multi_date_range_picker
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
