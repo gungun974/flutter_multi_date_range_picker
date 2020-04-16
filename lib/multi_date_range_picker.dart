@@ -6,7 +6,6 @@ import 'package:quiver/iterables.dart';
 
 import 'day.dart';
 
-
 class MultiDateRangePicker extends StatefulWidget {
   final List<List<DateTime>> initialValue;
   final Function(List<List<DateTime>> intervals) onChanged;
