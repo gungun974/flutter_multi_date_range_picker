@@ -13,7 +13,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  multi_date_range_picker: "^0.0.1"
+  multi_date_range_picker: "^0.0.2"
 ```
 
 In your library add the following import:
