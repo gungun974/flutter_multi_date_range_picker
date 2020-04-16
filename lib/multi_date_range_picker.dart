@@ -1,10 +1,11 @@
-library date_range_picker;
+library multi_date_range_picker;
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:quiver/iterables.dart';
 
 import 'day.dart';
+
 
 class MultiDateRangePicker extends StatefulWidget {
   final List<List<DateTime>> initialValue;
