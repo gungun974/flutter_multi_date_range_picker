@@ -1,5 +1,3 @@
-library date_range_picker;
-
 import 'package:meta/meta.dart';
 
 class Day {
