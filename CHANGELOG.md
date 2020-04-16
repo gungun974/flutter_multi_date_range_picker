@@ -1,3 +1,7 @@
+## [0.0.4] - Add calendar localization.
+
+* Start of week is now corresponds to intl local
+
 ## [0.0.3] - Bad intl version.
 
 * Set same version of intl for flutter.

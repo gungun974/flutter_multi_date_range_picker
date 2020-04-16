@@ -5,6 +5,7 @@ A simple and customize Date range picker with multi range
 ## Features
 
 * Create Multi Range picker
+* Support multi language (with intl localization)
 
 ## Getting Started
 
@@ -13,7 +14,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  multi_date_range_picker: "^0.0.3"
+  multi_date_range_picker: "^0.0.4"
 ```
 
 In your library add the following import:
@@ -48,4 +49,11 @@ ignoreTextColor = Colors.grey // Sets the color of external calendar date
 selectedDateTextColor = Colors.black // Sets the color of calendar date when is selected
 selectedIgnoreTextColor = Colors.black // Sets the color of external calendar date when is selected
 backgroundTextColor = Colors.white // Sets the background color
+```
+
+### Note
+For the customization of the local you will need at the start of your application to define the default local in intl
+```dart
+Intl.defaultLocale = 'fr';
+initializeDateFormatting();
 ```

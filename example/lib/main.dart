@@ -1,7 +1,16 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:multi_date_range_picker/multi_date_range_picker.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
+
+  Intl.defaultLocale = Intl.verifiedLocale(Platform.localeName, NumberFormat.localeExists,
+      onFailure: (_) => 'en_US');
+  initializeDateFormatting();
+
   runApp(MyApp());
 }
 

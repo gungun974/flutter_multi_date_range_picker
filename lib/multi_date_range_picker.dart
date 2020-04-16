@@ -3,6 +3,7 @@ library multi_date_range_picker;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:quiver/iterables.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 import 'day.dart';
 
@@ -80,8 +81,15 @@ class _MultiDateRangePickerState extends State<MultiDateRangePicker> {
     DateTime start = DateTime(masterDate.year, masterDate.month);
     DateTime finish = DateTime(masterDate.year, masterDate.month + 1);
 
+    print(dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK);
+
     start = start.add(Duration(days: -start.weekday));
+
+    start = start.subtract(Duration(days: (7 - dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK) % 7));
+
     finish = finish.add(Duration(days: 6 - finish.weekday));
+
+    finish = finish.subtract(Duration(days: (7 - dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK) % 7));
 
     for (var i = 0; i <= finish.difference(start).inDays; i++) {
       final date = start.add(Duration(days: i + 1));
@@ -360,43 +368,43 @@ class _MultiDateRangePickerState extends State<MultiDateRangePicker> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
-                        "LUN",
+                        DateFormat("EEE").format(DateTime(1, 1, dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK + 1)).toUpperCase().replaceAll(".", ""),
                         style: TextStyle(
                           color: widget.primaryTextColor,
                         ),
                       ),
                       Text(
-                        "MAR",
+                        DateFormat("EEE").format(DateTime(1, 1, dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK + 2)).toUpperCase().replaceAll(".", ""),
                         style: TextStyle(
                           color: widget.primaryTextColor,
                         ),
                       ),
                       Text(
-                        "MER",
+                        DateFormat("EEE").format(DateTime(1, 1, dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK + 3)).toUpperCase().replaceAll(".", ""),
                         style: TextStyle(
                           color: widget.primaryTextColor,
                         ),
                       ),
                       Text(
-                        "JEU",
+                        DateFormat("EEE").format(DateTime(1, 1, dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK + 4)).toUpperCase().replaceAll(".", ""),
                         style: TextStyle(
                           color: widget.primaryTextColor,
                         ),
                       ),
                       Text(
-                        "VEN",
+                        DateFormat("EEE").format(DateTime(1, 1, dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK + 5)).toUpperCase().replaceAll(".", ""),
                         style: TextStyle(
                           color: widget.primaryTextColor,
                         ),
                       ),
                       Text(
-                        "SAM",
+                        DateFormat("EEE").format(DateTime(1, 1, dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK + 6)).toUpperCase().replaceAll(".", ""),
                         style: TextStyle(
                           color: widget.primaryTextColor,
                         ),
                       ),
                       Text(
-                        "DIM",
+                        DateFormat("EEE").format(DateTime(1, 1, dateTimeSymbolMap()[Intl.getCurrentLocale()].FIRSTDAYOFWEEK + 7)).toUpperCase().replaceAll(".", ""),
                         style: TextStyle(
                           color: widget.primaryTextColor,
                         ),
