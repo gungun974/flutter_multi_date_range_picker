@@ -14,7 +14,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  multi_date_range_picker: "^0.0.4"
+  multi_date_range_picker: "^0.0.5"
 ```
 
 In your library add the following import:
@@ -43,6 +43,7 @@ You can change colors of selection and background and more.
 onlyOne = false // Allow only one selection
 selectionColor = Colors.lightGreenAccent // Sets the color of the selection
 buttonColor = Colors.lightGreenAccent // Sets the color of the buttons
+buttonTextColor = Colors.black // Sets the color of text in buttons
 primaryTextColor = Colors.black // Sets the color of UI text
 dateTextColor = Colors.black // Sets the color of calendar date
 ignoreTextColor = Colors.grey // Sets the color of external calendar date

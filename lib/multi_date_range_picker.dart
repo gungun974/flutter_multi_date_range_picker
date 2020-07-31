@@ -12,6 +12,7 @@ class MultiDateRangePicker extends StatefulWidget {
   final Function(List<List<DateTime>> intervals) onChanged;
   final Color selectionColor;
   final Color buttonColor;
+  final Color buttonTextColor;
   final Color primaryTextColor;
   final Color dateTextColor;
   final Color ignoreTextColor;
@@ -27,6 +28,7 @@ class MultiDateRangePicker extends StatefulWidget {
     this.onlyOne = false,
     this.selectionColor = Colors.lightGreenAccent,
     this.buttonColor = Colors.lightGreenAccent,
+    this.buttonTextColor = Colors.black,
     this.primaryTextColor = Colors.black,
     this.dateTextColor = Colors.black,
     this.ignoreTextColor = Colors.grey,
@@ -334,7 +336,7 @@ class _MultiDateRangePickerState extends State<MultiDateRangePicker> {
                   RaisedButton(
                     child: Icon(
                       Icons.navigate_before,
-                      color: widget.primaryTextColor,
+                      color: widget.buttonTextColor,
                     ),
                     onPressed: () {
                       setState(() {
@@ -352,7 +354,7 @@ class _MultiDateRangePickerState extends State<MultiDateRangePicker> {
                   RaisedButton(
                     child: Icon(
                       Icons.navigate_next,
-                      color: widget.primaryTextColor,
+                      color: widget.buttonTextColor,
                     ),
                     onPressed: () {
                       setState(() {
