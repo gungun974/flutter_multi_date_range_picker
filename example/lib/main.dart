@@ -6,8 +6,8 @@ import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-
-  Intl.defaultLocale = Intl.verifiedLocale(Platform.localeName, NumberFormat.localeExists,
+  Intl.defaultLocale = Intl.verifiedLocale(
+      Platform.localeName, NumberFormat.localeExists,
       onFailure: (_) => 'en_US');
   initializeDateFormatting();
 
@@ -33,7 +33,12 @@ class MyAppPage extends StatefulWidget {
 }
 
 class _MyAppPageState extends State<MyAppPage> {
-  List<List<DateTime>> intervals = [];
+  List<List<DateTime>> intervals = [
+    [
+      DateTime.now().add(Duration(days: -8)),
+      DateTime.now().add(Duration(days: 1))
+    ]
+  ];
 
   @override
   Widget build(BuildContext context) {
